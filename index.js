@@ -1,6 +1,6 @@
 
 import { default as EventEmitter } from 'events';
-import * as WebSocket from 'ws';
+import { default as WebSocket } from 'ws';
 
 const Defaults = {
   debug: false,
@@ -51,7 +51,7 @@ class LivelyWS extends EventEmitter {
     if (!this.settings.reconnect) return;
     this.debug('Reconnect client websocket.');
     if (this.connect()) this.configure();
-    else this.reconnectTimer = setTimeout(this.reconnect, this.settings.reconnectInterval);
+    else this.reconnectTimer = setTimeout(this.reconnect.bind(this), this.settings.reconnectInterval);
   }
 
   // configure websocket
