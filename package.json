@@ -1,0 +1,24 @@
+{
+  "name": "livelyws",
+  "version": "1.0.0",
+  "description": "Node module used to keep a websocket connection alive.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bnielsen1965/node-livelyws.git"
+  },
+  "keywords": [
+    "websocket",
+    "keepalive",
+    "reconnect"
+  ],
+  "author": "Bryan Nielsen <bnielsen1965@gmail.com> (https://bnielsen1965.github.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.2.1"
+  }
+}
