@@ -222,6 +222,12 @@ ws.send(JSON.stringify({ action: "restart" }));
 ```
 
 
+## init ()
+
+After creating a LivelyWS instance and adding listeners the init() method must be
+called to initialize the websocket connection.
+
+
 ## stopHeartbeatTimeout ()
 
 Stop the heartbeat timeout timer. Used when the messagePing setting is enabled
