@@ -155,7 +155,8 @@ class LivelyWS extends EventEmitter {
   }
 
   // close websocket
-  close (code, reason) {
+  close (code, reason, stopReconnect) {
+    if (stopReconnect) this.settings.reconnect = false;
     this.websocket.close(code, reason);
   }
 
